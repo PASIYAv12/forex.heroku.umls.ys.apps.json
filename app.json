@@ -1,0 +1,63 @@
+{
+  "name": "forex-autobot-node",
+  "description": "Telegram-controlled Forex Auto Trading Bot with MT5 bridge. Fully ready for Heroku deploy.",
+  "repository": "https://github.com/yourusername/forex-autobot-node",
+  "keywords": ["forex", "telegram", "mt5", "trading", "nodejs", "typescript"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "value": "8067527058:AAFd66Gf3UXUseiGGM725gbZeqwRso2EwBg",
+      "required": true
+    },
+    "ADMIN_TELEGRAM_USER_IDS": {
+      "description": "Comma-separated Telegram user IDs allowed to control the bot",
+      "value": "947845488818,94766359869",
+      "required": true
+    },
+    "ADMIN_PHONE_NUMBERS": {
+      "description": "Optional: Extra phone verification",
+      "value": "947845488818,94766359869",
+      "required": false
+    },
+    "AUTO_TRADE": {
+      "value": "false"
+    },
+    "BOT_ENABLED": {
+      "value": "true"
+    },
+    "RISK_PER_TRADE": {
+      "value": "0.01"
+    },
+    "DAILY_PROFIT_TARGET_MIN": {
+      "value": "50000"
+    },
+    "DAILY_PROFIT_TARGET_MAX": {
+      "value": "500000"
+    },
+    "MAX_DRAWDOWN_PERCENT": {
+      "value": "5"
+    },
+    "MT5_BRIDGE_URL": {
+      "value": "https://your-mt5-bridge-server.com"
+    },
+    "MT5_BRIDGE_API_KEY": {
+      "value": "changeme"
+    },
+    "MT5_SERVER": {
+      "value": "Exness-MT5Trial"
+    },
+    "MT5_LOGIN": {
+      "value": "12345678"
+    },
+    "MT5_PASSWORD": {
+      "value": "yourpassword"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "image": "heroku/nodejs"
+}
